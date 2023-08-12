@@ -1,0 +1,19 @@
+{
+  "name": "checksum-utilily",
+  "version": "1.0.0",
+  "description": "a checksum gui utility for windows",
+  "main": "index.js",
+  "scripts": {
+    "dev": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emma Victoria",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^25.5.0"
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "filereader": "^0.10.3"
+  }
+}
