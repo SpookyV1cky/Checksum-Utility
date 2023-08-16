@@ -12,10 +12,10 @@ btnSend.addEventListener('click', async()=>{
     let hashes = await window.api.sendFile();
     console.log(hashes);
     
-    MD5.innerText = hashes.MD5;
-    SHA1.innerText = hashes.SHA1;
-    SHA256.innerText = hashes.SHA256;
-    SHA512.innerText = hashes.SHA512;
+    MD5.innerText = hashes[0];
+    SHA1.innerText = hashes[1];
+    SHA256.innerText = hashes[2];
+    SHA512.innerText = hashes[3];
 
     });
 
@@ -30,6 +30,7 @@ btnCompare.addEventListener('click', ()=>{
     }
 
     let itMatch = (toCompare) => {
+        
         if(toCompare.length === MD5.innerText.length){
             if(toCompare === MD5.innerText){
                 return 'MD5';
