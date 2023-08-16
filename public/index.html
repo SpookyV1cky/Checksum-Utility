@@ -1,68 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <link rel="stylesheet" href="style/bootstrap.min.css">
-    <link rel="stylesheet" href="style/main.css">
-    <title>Checksum Utility - SpookyV1cky</title>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <link rel="stylesheet" href="style/bootstrap.min.css">
+  <link rel="stylesheet" href="style/main.css">
+  <title>Checksum Utility - SpookyV1cky</title>
+
+
+</head>
+
+<body>
+  <div class="title text-center">
+    <h2>Checksum Utility</h2>
+  </div>
+
+  <span></span>
+
+  <div class="container">
+    <table class="table table-dark cuteTable">
+      <thead>
+        <tr>
+          <th scope="col">Algorithm</th>
+          <th scope="col">Hash</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>MD5</td>
+          <td id="MD5"></td>
+        </tr>
+        <tr>
+          <td>SHA1</td>
+          <td id="SHA1"></td>
+        </tr>
+        <tr>
+          <td>SHA256</td>
+          <td id="SHA256"></td>
+        </tr>
+        <tr>
+          <td>SHA512</td>
+          <td id="SHA512"></td>
+        </tr>
+
+      </tbody>
+    </table>
 
     
-  </head>
-  <body class="container">
-    <h1>Checksum Utility - SpookyV1cky</h1>
-    
-    <span></span>
-
-    <table class="table table-info w-75">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Algorithm</th>
-            <th scope="col">Hash</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>MD5</td>
-            <td id="MD5"></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>SHA1</td>
-            <td id="SHA1"></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>SHA256</td>
-            <td id="SHA256"></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>SHA512</td>
-            <td id="SHA512"></td>
-          </tr>
-
-        </tbody>
-      </table>
-    
-    
-    <input type="text" class="form-control w-50" id="hash">
-    <button id="send" class="btn btn-primary">Checksum</button>
-    <button id="compare" class="btn btn-primary">Compare With</button>
-    <h3 id="compareResult"></h3>
-
-
+    <div class="row">
+      <div class="col-2">
+        <button id="send" class="btn btn-primary">Select File</button>
+      </div>
+      <div class="col-2">
+        <button id="compare" class="btn btn-primary">Compare With</button>
+      </div>
+      <div class="col-6">
+        <input type="text" class="form-control" id="hash" placeholder="MD5, SHA1, SHA256, SHA512">
+      </div>
+      <div class="col-2" style="align-items: center;">
+        <p id="compareResult"></p>
+      </div>
     </div>
+  </div>
 
-    <a href="https://github.com/SpookyV1cky/">
-        <img src="assets/github.png" alt="" style="width: 32px;">
-        <p>SpookyV1cky</p>
-    </a>
+
+
+
+  <div class="container text-center">
     
+    <a href="https://github.com/SpookyV1cky/" target="_blank" class="fixed-bottom logo">
+      <img src="assets/github.png" alt="" style="width: 32px;">
+      <p class="lead">SpookyV1cky</p>
+    </a>
+  
+  </div>
 
-    <script src="js/frontend.js"></script>
-  </body>
+
+  <script src="js/frontend.js"></script>
+</body>
+
 </html>

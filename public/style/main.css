@@ -1,3 +1,15 @@
 body{
-    background-color: #f5aab9;
+    background-color: #1a1d20;
+}
+.title{
+    background-color: black;
+    color: white;
+    min-height: 50px;
+}
+.cuteTable{
+    margin-top: 32px;
+}
+.logo{
+    color: white;
+    text-decoration: none;
 }

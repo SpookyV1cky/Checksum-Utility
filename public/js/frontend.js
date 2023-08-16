@@ -24,7 +24,9 @@ btnCompare.addEventListener('click', ()=>{
     const toCompare = input.value;
     
     if(toCompare=== ''|| toCompare === null){
-        return compareResult.innerText = `EMPTY`;
+        compareResult.style.color = 'grey';
+        compareResult.style.fontSize= '18px';
+        return compareResult.innerText = `<== EMPTY`;
     }
 
     let itMatch = (toCompare) => {
@@ -53,10 +55,14 @@ btnCompare.addEventListener('click', ()=>{
     let result = itMatch(toCompare);
     
     if(result){
+        compareResult.style.color = 'green';
+        compareResult.style.fontSize= '18px';
         compareResult.innerText = `${result} MATCH!!`;
     }
     else{
-        compareResult.innerText = `DIDNT MATCH`
+        compareResult.style.color= 'red';
+        compareResult.style.fontSize= '18px';
+        compareResult.innerText = `DIDNT MATCH`;
     }
     
 
