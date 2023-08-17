@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, Menu} = require('electron')
 const {ipcMain} = require('electron')
 const path = require('path');
 const {dialog} = require('electron');
@@ -11,10 +11,12 @@ const createWindow = () =>{
         height: 600,
         minWidth: 400,
         minHeight: 200,
+        titleBarStyle:'hidden',
         webPreferences:{
             preload: path.join(__dirname, '/conf/preload.js')
         }
     });
+    Menu.setApplicationMenu(null);
     mainWindow.loadFile('public/index.html');
 }
 console.log(__dirname);
